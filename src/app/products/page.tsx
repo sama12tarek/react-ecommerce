@@ -1,4 +1,4 @@
-import React from 'react';
+
 import getProduct from '../../lib/api/products.api';
 import SingleProduct from '../singleProduct/singleProduct';
 
