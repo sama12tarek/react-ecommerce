@@ -1,7 +1,29 @@
 
 import getProduct from '@/lib/api/products.api';
 import SingleProduct from '@/app/singleProduct/singleProduct';
-import { ProductType } from '@/types/product.type';
+
+export interface ProductType {
+  sold?: number
+  images: string[]
+  subcategory: Subcategory[]
+  ratingsQuantity: number
+  _id: string
+  title: string
+  slug: string
+  description: string
+  quantity: number
+  price: number
+  imageCover: string
+  category: Category
+  brand: Brand
+  ratingsAverage: number
+  createdAt: string
+  updatedAt: string
+  id: string
+  priceAfterDiscount?: number
+  availableColors?: string[]
+}
+
 
 
 export default async function AllProducts () {
@@ -11,7 +33,7 @@ export default async function AllProducts () {
         <div className='container my-12 w-[80%] mx-auto'>
             <div className='flex flex-wrap gap-4 p-4 justify-evenly'>
               {data.map((product:productType) => (
-                <SingleProduct key={product.id} product={product} />
+                <SingleProduct key={product.id} product={product:ProductType} />
               ))}
             </div>
           </div>
