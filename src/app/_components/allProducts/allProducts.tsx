@@ -5,7 +5,6 @@ import SingleProduct from '@/app/singleProduct/singleProduct';
 export interface ProductType {
   sold?: number
   images: string[]
-  subcategory: Subcategory[]
   ratingsQuantity: number
   _id: string
   title: string
@@ -20,8 +19,7 @@ export interface ProductType {
   createdAt: string
   updatedAt: string
   id: string
-  priceAfterDiscount?: number
-  availableColors?: string[]
+  
 }
 
 
