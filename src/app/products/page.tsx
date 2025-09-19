@@ -3,7 +3,7 @@ import getProduct from '../../lib/api/products.api';
 import SingleProduct from '../singleProduct/singleProduct';
 
 export default async function Products() {
-  let data = await getProduct();
+  const data = await getProduct();
 
   return (
     <>
