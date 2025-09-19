@@ -1,12 +1,29 @@
-import React from 'react';
-
-export default function Details({data})  {
+'use client';
+import Image from 'next/image';
+export interface productType {
+  sold?: number
+  images: string[]
+  ratingsQuantity: number
+  _id: string
+  title: string
+  slug: string
+  description: string
+  quantity: number
+  ratingsAverage: number
+  updatedAt: string
+  id: string
+  imageCover:string
+}
+interface DetailsProps {
+  data: ProductType; 
+}
+export default function Details({data}: DetailsProps)  {
   return (
       <div className="container w-[80%] p-4 mx-auto flex gap-4">
     
       <div className="w-1/4">
         <div className="p-4">
-          <img src={data.imageCover} alt={data.title} className="w-full" />
+          <Image src={data.imageCover} alt={data.title} className="w-full" width={400} height={400} />
         </div>
       </div>
       <div className="w-3/4">
