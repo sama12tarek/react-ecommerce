@@ -1,7 +1,8 @@
 
 import getProduct from '@/lib/api/products.api';
 import SingleProduct from '@/app/singleProduct/singleProduct';
-import { ProductType } from './../../../types/product.type';
+import { ProductType } from 'src/types/product.type';
+
 
 export default async function AllProducts () {
   const data=await getProduct()
