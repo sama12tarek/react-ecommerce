@@ -2,7 +2,7 @@
 import getProduct from '@/lib/api/products.api';
 import SingleProduct from '@/app/singleProduct/singleProduct';
 
-export interface ProductType {
+export interface productType {
   sold?: number
   images: string[]
   ratingsQuantity: number
