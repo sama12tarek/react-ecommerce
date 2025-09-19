@@ -33,7 +33,7 @@ export default async function AllProducts () {
         <div className='container my-12 w-[80%] mx-auto'>
             <div className='flex flex-wrap gap-4 p-4 justify-evenly'>
               {data.map((product:productType) => (
-                <SingleProduct key={product.id} product={product:ProductType} />
+                <SingleProduct key={product.id} product={product} />
               ))}
             </div>
           </div>
