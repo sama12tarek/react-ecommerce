@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import Image from 'next/image';
 
@@ -26,9 +27,17 @@ interface DetailsProps {
 }
 
 export default function Details({ data }: DetailsProps) {
+=======
+'use client'
+import { ProductType } from './../../../types/product.type';
+import AddBtn from '@/app/_components/addBtn/addBtn';
+
+export default function Details({data}:{data:ProductType})  {
+>>>>>>> 8a730db (fix: correctly typed params and removed invalid await)
   return (
     <div className="container w-[80%] p-4 mx-auto flex gap-4">
       <div className="w-1/4">
+<<<<<<< HEAD
         <div className="p-4">
           <Image
             src={data.imageCover}
@@ -37,6 +46,10 @@ export default function Details({ data }: DetailsProps) {
             width={400}
             height={400}
           />
+=======
+        <div className="p-4 ">
+          <Image src={data.imageCover} alt={data.title} className="w-full" width={200} height={200}/>
+>>>>>>> 8a730db (fix: correctly typed params and removed invalid await)
         </div>
       </div>
       <div className="w-3/4">
@@ -53,10 +66,10 @@ export default function Details({ data }: DetailsProps) {
               <span className="text-gray-700">{data.ratingsAverage}</span>
             </div>
           </div>
+            <AddBtn id={data.id}/>
+    
 
-          <button className="w-full bg-emerald-600 text-white py-2 mt-3 rounded hover:bg-emerald-700 transition">
-            Add to Cart
-          </button>
+        
         </div>
       </div>
     </div>
