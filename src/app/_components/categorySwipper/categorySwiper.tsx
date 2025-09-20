@@ -1,11 +1,13 @@
 'use client';
 
-import React from 'react';
+
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { Autoplay } from 'swiper/modules';
+import Image from 'next/image';
+import { CategoryType } from './../../../types/category.type';
 
-export default function CategorySwiper({ data }) {
+export default function CategorySwiper({ data }:{data:CategoryType[]}) {
   return (
     <div className="mx-auto w-[80%]">
       <h1 className='text-2xl font-bold text-pink-500 my-4'> category slider</h1>
@@ -17,13 +19,14 @@ export default function CategorySwiper({ data }) {
         autoplay={{ delay: 2000 }}
         loop
       >
-        {data.map((category) => (
+        {data.map((category:CategoryType) => (
           <SwiperSlide key={category._id}>
           
-                <img
+                <Image
                   src={category.image}
                   alt={category.name}
-                
+                width={200}
+                height={200}
                   className="object-cover w-full h-[150px]"
                 />
             

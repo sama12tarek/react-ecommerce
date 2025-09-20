@@ -1,12 +1,14 @@
-import React from 'react';
+'use client'
+import { ProductType } from './../../../types/product.type';
+import AddBtn from '@/app/_components/addBtn/addBtn';
 
-export default function Details({data})  {
+export default function Details({data}:{data:ProductType})  {
   return (
       <div className="container w-[80%] p-4 mx-auto flex gap-4">
     
       <div className="w-1/4">
-        <div className="p-4">
-          <img src={data.imageCover} alt={data.title} className="w-full" />
+        <div className="p-4 ">
+          <Image src={data.imageCover} alt={data.title} className="w-full" width={200} height={200}/>
         </div>
       </div>
       <div className="w-3/4">
@@ -25,10 +27,10 @@ export default function Details({data})  {
               <span className="text-gray-700">{data.ratingsAverage}</span>
             </div>
           </div>
+            <AddBtn id={data.id}/>
+    
 
-          <button className="w-full bg-emerald-600 text-white py-2 mt-3 rounded hover:bg-emerald-700 transition">
-            Add to Cart
-          </button>
+        
         </div>
       </div>
     </div>
