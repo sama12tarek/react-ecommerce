@@ -6,7 +6,7 @@ type Params = {
     id: string;
   };
 };
-export default async function ProductDetails({ params }) {
+export default async function ProductDetails({ params }:params) {
   const { id } = await params;
 
   const data= await selectedsProduct(id)
