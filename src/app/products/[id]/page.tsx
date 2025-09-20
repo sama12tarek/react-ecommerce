@@ -2,6 +2,7 @@ import selectedsProduct from '@/lib/api/selectedProduct';
 import React from 'react';
 import Details from '@/app/_components/details/details';
 
+
 type Params = {
   params: {
     id: string;

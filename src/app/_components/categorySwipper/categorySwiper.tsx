@@ -1,6 +1,5 @@
 'use client';
 
-
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { Autoplay } from 'swiper/modules';
@@ -14,7 +13,6 @@ export default function CategorySwiper({ data }:{data:CategoryType[]}) {
       <Swiper
         spaceBetween={0}
         slidesPerView={7}
-  
         modules={[Autoplay]}
         autoplay={{ delay: 2000 }}
         loop
@@ -38,6 +36,3 @@ export default function CategorySwiper({ data }:{data:CategoryType[]}) {
     </div>
   );
 }
-
-
-
